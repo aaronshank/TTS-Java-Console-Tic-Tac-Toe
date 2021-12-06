@@ -38,23 +38,17 @@ public class TicTacToeClass {
     }
 
     public boolean isFull() {
-        Boolean isItFull = false;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (board[i][j] != ' ') {
-                    return false;
-                } else {
-                    isItFull = true;
-                }
-            }
+        if (turns == 9) {
+            return true;
         }
-        return isItFull;
+        return false;
     }
 
     public boolean isCat() {
-        if (isFull() == true && isWinner) {
-
+        if (isFull() == true && isWinner('X') != true && isWinner('O') != true) {
+            return true;
         }
+        return false;
     }
 
     public boolean isValid(int r, int c) {
@@ -87,6 +81,7 @@ public class TicTacToeClass {
     // Modifiers
     public void playMove(char p, int r, int c) {
         board[r][c] = p;
+        turns++;
     }
 
 }
