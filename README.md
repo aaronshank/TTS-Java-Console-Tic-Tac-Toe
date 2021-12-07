@@ -2,7 +2,6 @@
 
 Write a class to handle the basics of a two-player game of Tic-Tac-Toe.
 The required methods are below.
-If you've done things correctly, save a copy of the files provided below into the same folder as TicTacToeClass.java and compile and run them to play or test your game.
 
 
 | | **Instance Variables** |
